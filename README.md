@@ -7,6 +7,7 @@ Software para controlar la impresora Olivetti PR4 en sus cuatro funciones.
 3. Pepel de deslizamiento;
 4. Papel de deslizamiento de validación;
 
+Modo Ejecucion.
 Antes de ejecutar en Windows.
 Instalar impresora con controlador "Gnerico solo texto" y compartirla.
 Obtener la ruta de la impresora o cola de impresión (Ejemplo en windows: \\MaquinaLuis\OlivettiPR4).
