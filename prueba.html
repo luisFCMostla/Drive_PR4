@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejemplo de impresión</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./gentelella-master/vendors/jquery/dist/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>Ejemplo de impresión</div>
+        <input type="button" value="Ir" onclick="enviaDatos()"/>
+        <!-- jQuery -->
+        <script type="text/javascript">
+            function enviaDatos()
+            {
+                var url="http://127.0.0.1:5000/";               
+                //var misdatos='{"ESC":"0x1B0x010x0A","STR":"LuisCesar","STR":"","STR":"FragosoChavarria","ESC":"0x0C"}';
+                var dDatos=[
+                    {"ESC":"0x1B,0x63,0x30,0x04"},
+                    {"STR":"Luis César"},
+                    {"STR":"Fragoso Chavarría"},
+                    {"STR":"luisf1803@gmail.com"},
+                    {"ESC":"0x0C"}
+                    ];
+                //var dDatos=JSON.parse(misdatos);
+                console.log(dDatos);
+                $.ajax({
+                        cache: false,
+                        type:"GET",
+                        datatype : "application/json",
+                        url:url,
+                        data:{
+                            impresora:"\\\\Leonora\\PR4",
+                            datos:dDatos                            
+                        },beforeSend: function (xhr) {                
+                            
+                        },complete: function (jqXHR, textStatus) {
+                            
+                        },error: function (jqXHR, textStatus, errorThrown) {
+                            
+                        },
+                        success:function(datos){                             
+
+                        }
+                    }); 
+            }
+        </script>
+    </body>    
+</html>
