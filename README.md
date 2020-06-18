@@ -59,7 +59,7 @@ java -jar Driver_PR4.jar "sv" <enter>
 } 
 
 Como se puede observar los datos y secuencias de escape tenen que ir anidados en arreglos para poder identificarlos y las lineas pueden ser tan extensas como fueran necesarias.
- 
+ Ejemplo html. abrela la pagina web prueba.html
  
 - Modo Librerias.
 Se puede tomar el proyecto e incorporarlo a un proyecto realizado en java y usar las funciones que se detallan en la documentacion.
